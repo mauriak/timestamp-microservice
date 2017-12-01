@@ -1,12 +1,12 @@
 # Timestamp Microservice API
 
-Parses a date string and returns a JSON with unix epoch time and the natural date
+Returns unix epoch time and the natural date from a date string in the URL
 
 ## Example usage
 
-`https://timestampms-fcc.glitch.me/12-21-2012`
+`https://timestamp-microserver1.glitch.me/12-21-2012`
 
-`https://timestampms-fcc.glitch.me/December%2012,%202012`
+`https://timestamp-microserver1.glitch.me/December%2012,%202012`
 
 ## Example output
 ```

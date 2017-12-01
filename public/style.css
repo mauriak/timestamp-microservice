@@ -6,6 +6,8 @@ body {
 	color: #222;
 	background-color: #ECF0F1;
   line-height: 1.2;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .container {
@@ -23,12 +25,13 @@ ol {
 ul {
 	list-style-type: none;
 }
-li {
-  margin: 25px 0;
-}
 
 a {
-	color: #2574A9;
+  display: block;
+  background: #222;
+  color: #fff;
+  padding: 25px;
+  border-radius: 25px;
 }
 /****** Logo Div Styling ******/
 
@@ -37,8 +40,3 @@ img {
 	display: block;
 }
 
-blockquote{
-  padding: 10px 20px;
-  margin: 0 0 20px;
-  font-size: 16px;
-}

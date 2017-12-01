@@ -11,28 +11,24 @@
    <body>
       <div class="container">
          <h1>
-           API Basejump: Timestamp microservice
+           Timestamp microservice
         </h1>
-        <blockquote>
-          User stories:
-          <ul>
-            <li>
-              1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)
-            </li>
-            <li>
-              2) If it does, it returns both the Unix timestamp and the natural language form of that date.
-            </li>
-            <li>
-              3) If it does not contain a date or Unix timestamp, it returns null for those properties.
-            </li>
-          </ul>
-        </blockquote>
-Example usage:
-https://timestamp-ms.herokuapp.com/December%2015,%202015
-https://timestamp-ms.herokuapp.com/1450137600
-Example output:
-{ "unix": 1450137600, "natural": "December 15, 2015" }
-      </div>
-   </body>
-
+        <p>
+          Returns unix epoch time and the natural date from a date string in the URL
+        </p><h2>Example usage</h2>
+    <a href="/12-21-2012">
+      https://timestamp-microserver1.glitch.me/12-21-2012
+    </a>
+    <br>
+    <a href="/December%2012,%202012">
+      https://timestamp-microserver1.glitch.me//December%2012,%202012
+    </a>
+    <h2>Example output</h2>
+    <pre><code>
+      {
+        "unix"    : 1356028200000,
+        "natural" : "December 21, 2012"
+      }
+  </div>
+</body>
 </html>
