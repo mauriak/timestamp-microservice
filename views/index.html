@@ -10,8 +10,28 @@
 
    <body>
       <div class="container">
-         <h1>Manage Node.js projects and npm packages using package.json</h1>
-         <h3>Part 1 of Free Code Camp Backend Challenges</h3>
+         <h1>
+           API Basejump: Timestamp microservice
+        </h1>
+        <blockquote>
+          User stories:
+          <ul>
+            <li>
+              1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)
+            </li>
+            <li>
+              2) If it does, it returns both the Unix timestamp and the natural language form of that date.
+            </li>
+            <li>
+              3) If it does not contain a date or Unix timestamp, it returns null for those properties.
+            </li>
+          </ul>
+        </blockquote>
+Example usage:
+https://timestamp-ms.herokuapp.com/December%2015,%202015
+https://timestamp-ms.herokuapp.com/1450137600
+Example output:
+{ "unix": 1450137600, "natural": "December 15, 2015" }
       </div>
    </body>
 

@@ -5,7 +5,7 @@ body {
 	font-size: 16px;
 	color: #222;
 	background-color: #ECF0F1;
-	text-align: center;
+  line-height: 1.2;
 }
 
 .container {
@@ -23,6 +23,9 @@ ol {
 ul {
 	list-style-type: none;
 }
+li {
+  margin: 25px 0;
+}
 
 a {
 	color: #2574A9;
@@ -32,4 +35,10 @@ a {
 img {
 	margin: 20px auto 0 auto;
 	display: block;
+}
+
+blockquote{
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 16px;
 }
