@@ -16,8 +16,11 @@ app.get("/", function (req, res) {
   })
 })
 
-app.use(express.static(path.join(__dirname, '/public')));
-//app.use('/public', express.static(process.cwd() + '/public'));
+app.get("/:timestamp", function (req, res) {
+  
+})
+
+app.use('/public', express.static(process.cwd() + '/public'));
 
 app.use(function(req, res, next){
   res.status(404);
