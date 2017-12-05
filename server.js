@@ -4,6 +4,10 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 
+app.get('/', function(req, res) {
+  res.render('index', {});
+})
+
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
     var allowedOrigins = ['https://narrow-plane.gomix.me', 'https://www.freecodecamp.com'];
