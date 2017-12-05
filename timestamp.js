@@ -9,7 +9,9 @@ app.get("/", function (req, res) {
   res.sendFile(fileName, function (err) {
     if (err) {
       console.log(err);
-    res.status(err.status)
+      res.status(err.status).end();
+    } else {
+      console.log(fileName);
     }
   })
 })
