@@ -18,6 +18,11 @@ app.get("/", function (req, res) {
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
+app.use(function(req, res, next){
+  res.status(404);
+  res.type('txt').send('404');
+});
+
 app.listen(port, function (){
   console.log("Listening on port: "  + port);
 })
