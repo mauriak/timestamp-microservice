@@ -3,15 +3,15 @@
 	"dependencies": {
 		"express": "^4.14.0"
 	},
-	"main": "server.js",
+	"main": "timestamp.js",
 	"scripts": {
-		"start": "node server.js"
+		"start": "node timestamp.js"
 	},
 	"engines": {
 		"node": "4.4.5"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://idontknow/todo.git"
+		"url": "https://github.com/mauriak/timestamp-microservice"
 	}
 }
