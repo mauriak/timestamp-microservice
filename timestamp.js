@@ -16,6 +16,8 @@ app.get("/", function (req, res) {
   })
 })
 
+app.use('/public', express.static(process.cwd() + '/public'));
+
 app.listen(port, function (){
   console.log("Listening on port: "  + port);
 })
