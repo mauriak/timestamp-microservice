@@ -15,8 +15,14 @@ app.get("/", function (req, res) {
     }
   })
 })
-
+//Get date and time and convert back
 app.get("/:timestamp", function (req, res) {
+  if (/[a-z]/i.test(req.params.timestamp.charAt(0))) {
+    res.send(req.params)
+  } else {
+    res.sendFile('index.html');
+  }
+  
   
 })
 
