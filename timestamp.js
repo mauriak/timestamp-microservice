@@ -19,8 +19,8 @@ app.get("/", function (req, res) {
 app.get("/:timestamp", function (req, res) {
   if (/[a-z]/i.test(req.params.timestamp.charAt(0))) {
     res.send(req.params)
-  } else {
-    res.sendFile('index.html');
+  } else if (/[0-9]/i.test(req.params.timestamp.charAt(0))) {
+    res.send('monday')
   }
   
   
