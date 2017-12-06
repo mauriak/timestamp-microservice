@@ -1,7 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var path = require('path');
-var port = process.env.PORT
+var port = process.env.PORT || 3000
 var app = express();
 
 app.get("/", function (req, res) {
@@ -11,16 +11,16 @@ app.get("/", function (req, res) {
       console.log(err);
       res.status(err.status).end();
     } else {
-      console.log(fileName);
+      
     }
-  })
+  }) 
 })
 //Get date and time and convert back
 app.get("/:timestamp", function (req, res) {
   if (/[a-z]/i.test(req.params.timestamp.charAt(0))) {
-    res.send(req.params)
+    
   } else if (/[0-9]/i.test(req.params.timestamp.charAt(0))) {
-    res.send('monday')
+    res.json({time: req.params.timestamp})
   }
   
   
