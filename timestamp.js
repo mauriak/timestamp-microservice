@@ -18,10 +18,15 @@ app.get("/", function (req, res) {
 //Get date and time and convert back
 app.get("/:timestamp", function (req, res) {
   var dateVal = req.params.timestamp;
-  if (/[a-z]/i.test(dateVal.charAt(0))) {
-    res.json ({date: dateVal})
-  } else if (/[0-9]/i.test(dateVal.charAt(0))) {
-    res.json({time: dateVal})
+  var dateFormattingOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
+  
+  if (isNaN(dateVal)) {
+    var naturalDate = new Date(dateVal);
+    
   }
   
   
