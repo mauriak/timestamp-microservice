@@ -26,11 +26,18 @@ app.get("/:timestamp", function (req, res) {
   
   if (isNaN(dateVal)) {
     var naturalDate = new Date(dateVal);
-    
+    naturalDate = naturalDate.toLocaleDateString('en-us', dateFormattingOptions)
+    var unixDate = new Date(dateVal).getTime()/1000;
+  } else {
+    var unixDate = dateVal;
+    var naturalDate = new Date(dateVal * 1000);
+    naturalDate = naturalDate.toLocaleDateString('en-us', dateFormattingOptions)
   }
   
+  res.json({unix: unixDate, natural: naturalDate});
   
-})
+  
+});
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
