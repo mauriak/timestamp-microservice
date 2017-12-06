@@ -17,10 +17,11 @@ app.get("/", function (req, res) {
 })
 //Get date and time and convert back
 app.get("/:timestamp", function (req, res) {
-  if (/[a-z]/i.test(req.params.timestamp.charAt(0))) {
-    
-  } else if (/[0-9]/i.test(req.params.timestamp.charAt(0))) {
-    res.json({time: req.params.timestamp})
+  var dateVal = req.params.timestamp;
+  if (/[a-z]/i.test(dateVal.charAt(0))) {
+    res.json ({date: dateVal})
+  } else if (/[0-9]/i.test(dateVal.charAt(0))) {
+    res.json({time: dateVal})
   }
   
   
