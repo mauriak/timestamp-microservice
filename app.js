@@ -26,8 +26,9 @@ app.get("/:timestamp", function (req, res) {
   
   if (isNaN(dateVal)) {
     var naturalDate = new Date(dateVal);
-    res.send(naturalDate)
+    if (!isNaN(naturalDate)) {
     naturalDate = naturalDate.toLocaleDateString('en-us', dateFormattingOptions)
+    }
     
     var unixDate = new Date(dateVal).getTime()/1000;
   } else {
