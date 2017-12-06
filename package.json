@@ -1,17 +1,17 @@
 {
-	"name": "fcc-learn-npm-package-json",
-	"dependencies": {
-		"express": "^4.14.0"
-	},
-	"main": "timestamp.js",
-	"scripts": {
-		"start": "node timestamp.js"
-	},
-	"engines": {
-		"node": "4.4.5"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mauriak/timestamp-microservice"
-	}
+  "name": "fcc-learn-npm-package-json",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "4.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauriak/timestamp-microservice"
+  }
 }
